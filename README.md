@@ -27,7 +27,6 @@ La API funciona sobre las entidades:
 ### Autos
 
 | Endpoint   | Método | Controlador        | Acción                              | 
-|------------|--------|--------------------|-------------------------------------|
 | /autos     | GET    | CarApiController   | Muestra todos los Autos             |
 | /autosOp   | GET    | CarApiController   | Muestra todos los Autos (Opcional)  |
 | /autos     | POST   | CarApiController   | Crea un nuevo auto                  |
@@ -41,6 +40,7 @@ La API funciona sobre las entidades:
 - **Endpoint:** `/autos`
 - **Método**: `GET`
 - **Ejemplo**:
+
     ```
     http://localhost/web2/TPE-Web2-CarBuy-Api/api/autos
     ```
@@ -55,6 +55,7 @@ Para la parte opcional del trabajo, en la cual se debia poder ordenar, filtrar o
    - **limit**: Numero de elementos a mostrar.
    - **page**: Pagina a mostrar.
 - **Ejemplo Completo**:
+
     ```
     http://localhost/web2/TPE-Web2-CarBuy-Api/api/autosOp?order_by=id_marca_fk=1&order_dir=id_auto desc&limit=3&page=2
     ```
@@ -64,6 +65,7 @@ Para la parte opcional del trabajo, en la cual se debia poder ordenar, filtrar o
 - **Endpoint:** `/autos`
 - **Método**: `POST`
 - **Ejemplo**:
+
     ```
     http://localhost/web2/TPE-Web2-CarBuy-Api/api/autos
     ```
@@ -83,6 +85,7 @@ Para la parte opcional del trabajo, en la cual se debia poder ordenar, filtrar o
 - **Endpoint:** `/auto/:id`
 - **Método**: `PUT`
 - **Ejemplo**:
+
     ```
     http://localhost/web2/TPE-Web2-CarBuy-Api/api/auto/18
     ```
@@ -102,6 +105,7 @@ Para la parte opcional del trabajo, en la cual se debia poder ordenar, filtrar o
 - **Endpoint:** `/auto/:id`
 - **Método**: `DELETE`
 - **Ejemplo**:
+
     ```
     http://localhost/web2/TPE-Web2-CarBuy-Api/api/auto/18
     ```
@@ -109,7 +113,6 @@ Para la parte opcional del trabajo, en la cual se debia poder ordenar, filtrar o
 ### Marcas
 
 | Endpoint   | Método | Controlador        | Acción                              | 
-|------------|--------|--------------------|-------------------------------------|
 | /marcas    | GET    | MarcaApiController | Muestra todos las Marcas            |
 | /marcasOp  | GET    | MarcaApiController | Muestra todos las Marcas (Opcional) |
 | /marcas    | POST   | MarcaApiController | Crea una nueva marca                |
