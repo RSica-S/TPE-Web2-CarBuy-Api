@@ -27,6 +27,7 @@ La API funciona sobre las entidades:
 ### Autos
 
 | Endpoint   | Método | Controlador        | Acción                              | 
+|------------|--------|--------------------|-------------------------------------|
 | /autos     | GET    | CarApiController   | Muestra todos los Autos             |
 | /autosOp   | GET    | CarApiController   | Muestra todos los Autos (Opcional)  |
 | /autos     | POST   | CarApiController   | Crea un nuevo auto                  |
@@ -113,6 +114,7 @@ Para la parte opcional del trabajo, en la cual se debia poder ordenar, filtrar o
 ### Marcas
 
 | Endpoint   | Método | Controlador        | Acción                              | 
+|------------|--------|--------------------|-------------------------------------|
 | /marcas    | GET    | MarcaApiController | Muestra todos las Marcas            |
 | /marcasOp  | GET    | MarcaApiController | Muestra todos las Marcas (Opcional) |
 | /marcas    | POST   | MarcaApiController | Crea una nueva marca                |
