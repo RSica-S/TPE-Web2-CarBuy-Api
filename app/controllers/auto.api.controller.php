@@ -1,6 +1,7 @@
 <?php
 
 require_once 'app/models/auto.model.php';
+require_once 'app/models/marca.model.php';
 require_once 'app/views/api.view.php';
 
 class CarApiController {
@@ -10,6 +11,7 @@ class CarApiController {
 
     public function __construct() {
         $this->model = new CarModel();
+        $this->Marcamodel = new MarcaModel();
         $this->view = new APIView();
         $this->data = file_get_contents('php://input');
     }
@@ -72,6 +74,10 @@ class CarApiController {
             return $this->view->response("Faltan completar campos", 401);
         }
 
+        if(!$this->Marcamodel->getMarca($id_marca)){
+            return $this->view->response("No existe marca con id:" . $id_marca . ". No se creo el auto", 404);
+        }
+
         $dato = $this->model->createAuto($nombre_auto, $descripcion, $precio, $id_marca);
 
         return $this->view->response($dato, 200);
@@ -94,6 +100,10 @@ class CarApiController {
 
         if(empty($nombre_auto) || empty($descripcion) || empty($precio) || empty($id_marca)){
             return $this->view->response("Faltan completar campos", 401);
+        }
+
+        if(!$this->Marcamodel->getMarca($id_marca)){
+            return $this->view->response("No existe marca con id:" . $id_marca . ". No se pudo modificar datos", 404);
         }
 
         $idEditado = $this->model->updateAuto($nombre_auto, $descripcion, $precio, $id_marca, $id);

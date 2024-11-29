@@ -64,8 +64,9 @@ class MarcaModel extends Model {
         $query = $pDO->prepare($sql);
         try {
             $query->execute([$id]);
+            return true;
         } catch (\Throwable $th) {
-            return null;
+            return false;
         }
     }
 

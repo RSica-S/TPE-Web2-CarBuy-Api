@@ -7,7 +7,7 @@ class CarModel extends Model {
     //Función que pide a la DB todas los autos
     public function getAutos(){
         $pdo = $this->crearConexion();
-        $sql = "select * from autos order by nombre_auto DESC";
+        $sql = "select * from autos order by id_auto ASC";
         $query = $pdo->prepare($sql);
         $query->execute();
     

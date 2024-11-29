@@ -57,8 +57,12 @@ class MarcaApiController {
             return $this->view->response("No existe la marca con el id = $id", 404);
         }
         else{
-            $this->model->deleteMarca($id);
-            return $this->view->response("Se a eliminado la marca con id = $id", 200);
+            $eliminado = $this->model->deleteMarca($id);
+            if($eliminado)
+                return $this->view->response("Se a eliminado la marca con id = $id", 200);
+            else 
+                return $this->view->response("No se eliminó id = $id", 200);
+
         }
     }
 
