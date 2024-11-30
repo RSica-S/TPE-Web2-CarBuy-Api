@@ -22,11 +22,15 @@ Para el despliegue desde el repositorio se deben realizar los siguientes pasos:
 2. Se debe configurar la base de datos. La base de datos deberá llevar el nombre **db_carbuy**. La misma cuenta con el método Auto Deploy.
 3. Contar con alguna herramienta para construir y testear APIs. ej.: **POSTMAN** (La cual será utilizada en este caso). 
 
+- - - 
+
 ## Funcionamiento
 
 La API funciona sobre las entidades:
 - Autos: Permite gestionar el inventario de autos a disposición, teniendo en cuenta el precio, descripción y marca.
 - Marcas: Permite gestionar el listado de marcas a disposición en la concesionaria, con los autos que cuenta y logo para su mejor visualización. 
+
+- - - 
 
 ### Autos
 
@@ -56,7 +60,18 @@ Para la parte opcional del trabajo, en la cual se debia poder ordenar, filtrar o
 - **Método**: `GET`
 - Parametros adicionales:
    - **order_dir**: ordena los resultados por una columna de forma ascendente o descendente.
+   <details><summary>Valores Permitidos</summary>
+    1. `ASC`
+    2. `DESC` 
+   </details>
    - **order_by**: filtra por campo.
+   <details><summary>Valores Permitidos</summary>
+    1. `id_auto`
+    2. `nombre_auto`
+    3. `descripcion`
+    4. `precio`
+    5. `id_marca_fk` 
+   </details>
    - **limit**: Numero de elementos a mostrar.
    - **page**: Pagina a mostrar.
 - **Ejemplo Completo**:
@@ -114,6 +129,7 @@ Para la parte opcional del trabajo, en la cual se debia poder ordenar, filtrar o
     ```
     http://localhost/web2/TPE-Web2-CarBuy-Api/api/auto/18
     ```
+- - -  
 
 ### Marcas
 
