@@ -4,18 +4,18 @@
 >
 >Se creo rama nueva 25/11/2024
 
-### Integrantes:
+## Integrantes:
 Ramiro Sica Suescun  -- (ramirosicas@gmail.com)
 
-### Temática del trabajo
+## Temática del trabajo
 Desarrollo de una **API REST** publica para brindar integración a otros sistemas, orientado a una concesionaria de autos. 
 
-### Descripción del Trabajo
+## Descripción del Trabajo
 Se ha desarrollado una **API RESTful**, que implementa servicios **ABM** (Alta, Baja, Consulta y Modificación) que se pueden realizar sobre un conjunto de datos. 
 
 La misma trabaja sobre la base de datos del proyecto anterior, la cual se basaba en una relación entre los registros de autos y marcas. Esta relación se define como 1-N, donde cada auto está asociado a una única marca y mientras que una marca puede estar relacionado con más de un auto.
 
-### Despliegue
+## Despliegue
 Para el despliegue desde el repositorio se deben realizar los siguientes pasos:
 
 1. Clonar el repositorio en su ordenador. La clonación puede hacerse descomprimiendo el archivo ZIP o clonando mediante aplicaciones como GIT.
@@ -40,7 +40,7 @@ La API funciona sobre las entidades:
 | /auto/:id  | PUT    | CarApiController   | Modifica un auto según ID           |
 
 
-**Mostrar todos los autos**
+#### **Mostrar todos los autos**
 
 - **Endpoint:** `/autos`
 - **Método**: `GET`
@@ -65,7 +65,7 @@ Para la parte opcional del trabajo, en la cual se debia poder ordenar, filtrar o
     http://localhost/web2/TPE-Web2-CarBuy-Api/api/autosOp?order_by=id_marca_fk=1&order_dir=id_auto desc&limit=3&page=2
     ```
 
-**Crear un nuevo auto**
+#### **Crear un nuevo auto**
 
 - **Endpoint:** `/autos`
 - **Método**: `POST`
@@ -85,7 +85,7 @@ Para la parte opcional del trabajo, en la cual se debia poder ordenar, filtrar o
     }
     ```
 
-**Modificar auto**
+#### **Modificar auto**
 
 - **Endpoint:** `/auto/:id`
 - **Método**: `PUT`
@@ -105,7 +105,7 @@ Para la parte opcional del trabajo, en la cual se debia poder ordenar, filtrar o
     }
     ```
 
-**Elimirar auto**
+#### **Elimirar auto**
 
 - **Endpoint:** `/auto/:id`
 - **Método**: `DELETE`
@@ -127,6 +127,80 @@ Para la parte opcional del trabajo, en la cual se debia poder ordenar, filtrar o
 | /marca/:id | PUT    | MarcaApiController | Modifica una marca según ID         |
 
 
+#### **Mostrar todas las marcas**
+
+- **Endpoint:** `/marcas`
+- **Método**: `GET`
+- **Ejemplo**:
+
+    ```
+    http://localhost/web2/TPE-Web2-CarBuy-Api/api/marcas
+    ```
+
+Para la parte opcional del trabajo, en la cual se debia poder ordenar, filtrar o paginar se realizo a traves de otro endpoint que funciona con parametros adicionales
+
+- **Endpoint:** `/marcasOp`
+- **Método**: `GET`
+- Parametros adicionales:
+   - **order_dir**: ordena los resultados por una columna de forma ascendente o descendente.
+   - **order_by**: filtra por campo.
+   - **limit**: Numero de elementos a mostrar.
+   - **page**: Pagina a mostrar.
+- **Ejemplo Completo**:
+
+    ```
+    http://localhost/web2/TPE-Web2-CarBuy-Api/api/marcasOp?order_by=id_marca_fk=1&order_dir=id_auto desc&limit=3&page=2
+    ```
+
+#### **Crear una nueva marca**
+
+- **Endpoint:** `/marcas`
+- **Método**: `POST`
+- **Ejemplo**:
+
+    ```
+    http://localhost/web2/TPE-Web2-CarBuy-Api/api/marcas
+    ```
+    Los datos se ingresan por **body** en formato **JSON**
+    
+    ```json
+    {
+        "nombre_auto": "Clio",
+        "descripcion": "Renault Clio 1.6 | 2004 | 286.000KM",
+        "precio": "$6.000.500",
+        "id_marca_fk": 7
+    }
+    ```
+
+#### **Modificar marca**
+
+- **Endpoint:** `/marca/:id`
+- **Método**: `PUT`
+- **Ejemplo**:
+
+    ```
+    http://localhost/web2/TPE-Web2-CarBuy-Api/api/marca/18
+    ```
+    Los datos se ingresan por **body** en formato **JSON**
+    
+    ```json
+    {
+        "nombre_auto": "Clio Mio",
+        "descripcion": "Renault Clio Mio 1.6 | 2004 | 286.000KM",
+        "precio": "$6.000.500",
+        "id_marca_fk": 7
+    }
+    ```
+
+#### **Elimirar marca**
+
+- **Endpoint:** `/marca/:id`
+- **Método**: `DELETE`
+- **Ejemplo**:
+
+    ```
+    http://localhost/web2/TPE-Web2-CarBuy-Api/api/marca/18
+    ```
 
 
 ## Usuario administrador:
