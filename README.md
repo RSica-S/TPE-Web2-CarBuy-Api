@@ -34,14 +34,14 @@ La API funciona sobre las entidades:
 
 ### Autos
 
-| Endpoint   | Método | Controlador        | Acción                              | 
-|------------|--------|--------------------|-------------------------------------|
-| /autos     | GET    | CarApiController   | Muestra todos los Autos             |
-| /autosOp   | GET    | CarApiController   | Muestra todos los Autos (Opcional)  |
-| /autos     | POST   | CarApiController   | Crea un nuevo auto                  |
-| /auto/:id  | GET    | CarApiController   | Muestra un auto según ID            |
-| /auto/:id  | DELETE | CarApiController   | Borra un auto según ID              |
-| /auto/:id  | PUT    | CarApiController   | Modifica un auto según ID           |
+| Endpoint   | Método | Controlador        | Acción                              | Parametros Adicionales                   | 
+|------------|--------|--------------------|-------------------------------------|------------------------------------------|
+| /autos     | GET    | CarApiController   | Muestra todos los Autos             |                                          |
+| /autosOp   | GET    | CarApiController   | Muestra todos los Autos (Opcional)  | `order_by`, `order_dir`, `limit`, `page` |
+| /autos     | POST   | CarApiController   | Crea un nuevo auto                  |                                          |
+| /auto/:id  | GET    | CarApiController   | Muestra un auto según ID            |                                          |
+| /auto/:id  | DELETE | CarApiController   | Borra un auto según ID              |                                          |
+| /auto/:id  | PUT    | CarApiController   | Modifica un auto según ID           |                                          |
 
 
 #### **Mostrar todos los autos**
@@ -150,14 +150,14 @@ Para la parte opcional del trabajo, en la cual se debia poder ordenar, filtrar o
 
 ### Marcas
 
-| Endpoint   | Método | Controlador        | Acción                              | 
-|------------|--------|--------------------|-------------------------------------|
-| /marcas    | GET    | MarcaApiController | Muestra todos las Marcas            |
-| /marcasOp  | GET    | MarcaApiController | Muestra todos las Marcas (Opcional) |
-| /marcas    | POST   | MarcaApiController | Crea una nueva marca                |
-| /marca/:id | GET    | MarcaApiController | Muestra una marca según ID          |
-| /marca/:id | DELETE | MarcaApiController | Borra una marca según ID            |
-| /marca/:id | PUT    | MarcaApiController | Modifica una marca según ID         |
+| Endpoint   | Método | Controlador        | Acción                              | Parametros Adicionales                   |
+|------------|--------|--------------------|-------------------------------------|------------------------------------------|
+| /marcas    | GET    | MarcaApiController | Muestra todos las Marcas            |                                          |
+| /marcasOp  | GET    | MarcaApiController | Muestra todos las Marcas (Opcional) | `order_by`, `order_dir`, `limit`, `page` |
+| /marcas    | POST   | MarcaApiController | Crea una nueva marca                |                                          |
+| /marca/:id | GET    | MarcaApiController | Muestra una marca según ID          |                                          |
+| /marca/:id | DELETE | MarcaApiController | Borra una marca según ID            |                                          |
+| /marca/:id | PUT    | MarcaApiController | Modifica una marca según ID         |                                          |   
 
 
 #### **Mostrar todas las marcas**
