@@ -89,7 +89,7 @@ class MarcaApiController {
             return $this->view->response("No existe la marca con id = $id", 404);
         }
 
-        $nombre_marca = $req->body->nombre_auto;
+        $nombre_marca = $req->body->nombre_marca;
         $img = $req->body->img_marca;
 
         if(empty($nombre_marca) || empty($img)){

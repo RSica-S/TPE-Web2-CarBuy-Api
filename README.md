@@ -68,7 +68,7 @@ Para la parte opcional del trabajo, en la cual se debia poder ordenar, filtrar o
         - **Ejemplo**:
 
         ```
-        http://localhost/web2/TPE-Web2-CarBuy-Api/api/autosOp?order_by=id_marca_fk=1&order_dir=id_auto desc&limit=3&page=2
+        http://localhost/web2/TPE-Web2-CarBuy-Api/api/autosOp?order_by=id_marca_fk=1
         ```         
         </details> 
    - **order_dir**: - ordena los resultados por una columna de forma ascendente o descendente.<details><summary>*Valores Permitidos:*</summary>
@@ -77,18 +77,18 @@ Para la parte opcional del trabajo, en la cual se debia poder ordenar, filtrar o
         - **Ejemplo**:
         
         ```
-        http://localhost/web2/TPE-Web2-CarBuy-Api/api/autosOp?order_by=id_marca_fk=1&order_dir=id_auto desc&limit=3&page=2
+        http://localhost/web2/TPE-Web2-CarBuy-Api/api/autosOp?order_dir=id_marca_fk asc
         ```
         </details> 
    - **limit**: Numero de elementos a mostrar. <details><summary>*Ejemplo*</summary>
         ```
-        http://localhost/web2/TPE-Web2-CarBuy-Api/api/autosOp?order_by=id_marca_fk=1&order_dir=id_auto desc&limit=3&page=2
+        http://localhost/web2/TPE-Web2-CarBuy-Api/api/autosOp?limit=3
         ```
         </details>
 
-   - **page**: Pagina a mostrar. <details><summary>*Ejemplo*</summary>
+   - **page**: Pagina a mostrar. Para que exista paginas tiene que haber un limite en los elementos a mostrar <details><summary>*Ejemplo*</summary>
         ```
-        http://localhost/web2/TPE-Web2-CarBuy-Api/api/autosOp?order_by=id_marca_fk=1&order_dir=id_auto desc&limit=3&page=2
+        http://localhost/web2/TPE-Web2-CarBuy-Api/api/autosOp?limit=3&page=2
         ```
         </details>
 - **Ejemplo Completo**:
@@ -182,7 +182,7 @@ Para la parte opcional del trabajo, en la cual se debia poder ordenar, filtrar o
         - **Ejemplo**:
 
         ```
-        http://localhost/web2/TPE-Web2-CarBuy-Api/api/autosOp?order_by=id_marca_fk=1&order_dir=id_auto desc&limit=3&page=2
+        http://localhost/web2/TPE-Web2-CarBuy-Api/api/marcasOp?order_by=id_marca=1
         ```         
         </details> 
    - **order_dir**: - ordena los resultados por una columna de forma ascendente o descendente.<details><summary>*Valores Permitidos:*</summary>
@@ -191,25 +191,20 @@ Para la parte opcional del trabajo, en la cual se debia poder ordenar, filtrar o
         - **Ejemplo**:
         
         ```
-        http://localhost/web2/TPE-Web2-CarBuy-Api/api/autosOp?order_by=id_marca_fk=1&order_dir=id_auto desc&limit=3&page=2
+        http://localhost/web2/TPE-Web2-CarBuy-Api/api/marcasOp?order_dir=id_marca desc
         ```
         </details> 
    - **limit**: Numero de elementos a mostrar. <details><summary>*Ejemplo*</summary>
         ```
-        http://localhost/web2/TPE-Web2-CarBuy-Api/api/autosOp?order_by=id_marca_fk=1&order_dir=id_auto desc&limit=3&page=2
+        http://localhost/web2/TPE-Web2-CarBuy-Api/api/marcasOp?limit=5
         ```
         </details>
 
-   - **page**: Pagina a mostrar. <details><summary>*Ejemplo*</summary>
+   - **page**: Pagina a mostrar. Para que exista paginas tiene que haber un limite en los elementos a mostrar <details><summary>*Ejemplo*</summary>
         ```
-        http://localhost/web2/TPE-Web2-CarBuy-Api/api/autosOp?order_by=id_marca_fk=1&order_dir=id_auto desc&limit=3&page=2
+        http://localhost/web2/TPE-Web2-CarBuy-Api/api/marcasOp?limit=5&page=2
         ```
         </details>
-- **Ejemplo Completo**:
-
-    ```
-    http://localhost/web2/TPE-Web2-CarBuy-Api/api/autosOp?order_by=id_marca_fk=1&order_dir=id_auto desc&limit=3&page=2
-    ```
 
 #### **Crear una nueva marca**
 
@@ -224,10 +219,8 @@ Para la parte opcional del trabajo, en la cual se debia poder ordenar, filtrar o
     
     ```json
     {
-        "nombre_auto": "Clio",
-        "descripcion": "Renault Clio 1.6 | 2004 | 286.000KM",
-        "precio": "$6.000.500",
-        "id_marca_fk": 7
+        "nombre_marca": "Fiat",
+        "img_marca": "imagen.png"
     }
     ```
 
@@ -238,16 +231,14 @@ Para la parte opcional del trabajo, en la cual se debia poder ordenar, filtrar o
 - **Ejemplo**:
 
     ```
-    http://localhost/web2/TPE-Web2-CarBuy-Api/api/marca/18
+    http://localhost/web2/TPE-Web2-CarBuy-Api/api/marca/13
     ```
     Los datos se ingresan por **body** en formato **JSON**
     
     ```json
     {
-        "nombre_auto": "Clio Mio",
-        "descripcion": "Renault Clio Mio 1.6 | 2004 | 286.000KM",
-        "precio": "$6.000.500",
-        "id_marca_fk": 7
+       "nombre_marca": "Fiat",
+        "img_marca": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/FIAT_logo_%282020%29.svg/1280px-FIAT_logo_%282020%29.svg.png"
     }
     ```
 
@@ -258,7 +249,7 @@ Para la parte opcional del trabajo, en la cual se debia poder ordenar, filtrar o
 - **Ejemplo**:
 
     ```
-    http://localhost/web2/TPE-Web2-CarBuy-Api/api/marca/18
+    http://localhost/web2/TPE-Web2-CarBuy-Api/api/marca/12
     ```
 
 
