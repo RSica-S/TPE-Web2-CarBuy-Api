@@ -59,18 +59,16 @@ Para la parte opcional del trabajo, en la cual se debia poder ordenar, filtrar o
 - **Endpoint:** `/autosOp`
 - **Método**: `GET`
 - Parametros adicionales:
-   - **order_dir**: <details><summary>Valores Permitidos:`desc` `asc` </summary>
-                    - ordena los resultados por una columna de forma ascendente o descendente.
-                    </details> 
-   - **order_by**: filtra por campo.
-        <details>
-        <summary>Valores Permitidos</summary>
+   - **order_by**: filtra por campo.<details><summary>Valores Permitidos:</summary>
             - `id_auto`
             - `nombre_auto`
             - `descripcion`
             - `precio`
             - `id_marca_fk` 
-        </details>
+        </details> 
+   - **order_dir**: <details><summary>Valores Permitidos:`desc` `asc` </summary>
+                    - ordena los resultados por una columna de forma ascendente o descendente.
+                    </details> 
    - **limit**: Numero de elementos a mostrar.
    - **page**: Pagina a mostrar.
 - **Ejemplo Completo**:
