@@ -59,12 +59,9 @@ Para la parte opcional del trabajo, en la cual se debia poder ordenar, filtrar o
 - **Endpoint:** `/autosOp`
 - **Método**: `GET`
 - Parametros adicionales:
-   - **order_dir**: ordena los resultados por una columna de forma ascendente o descendente.
-        <details>
-        <summary>Valores Permitidos</summary>
-            - `ASC`
-            - `DESC` 
-        </details>
+   - **order_dir**: <details><summary>Valores Permitidos:`desc` `asc` </summary>
+                    - ordena los resultados por una columna de forma ascendente o descendente.
+                    </details> 
    - **order_by**: filtra por campo.
         <details>
         <summary>Valores Permitidos</summary>
