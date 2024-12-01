@@ -60,15 +60,24 @@ Para la parte opcional del trabajo, en la cual se debia poder ordenar, filtrar o
 - **Método**: `GET`
 - Parametros adicionales:
    - **order_by**: filtra por campo.<details><summary>Valores Permitidos:</summary>
-            - `id_auto`
-            - `nombre_auto`
-            - `descripcion`
-            - `precio`
-            - `id_marca_fk` 
+        - `id_auto`
+        - `nombre_auto`
+        - `descripcion`
+        - `precio`
+        - `id_marca_fk`
+        - **Ejemplo**:
+        ```
+        http://localhost/web2/TPE-Web2-CarBuy-Api/api/autosOp?order_by=id_marca_fk=1&order_dir=id_auto desc&limit=3&page=2
+        ```         
         </details> 
-   - **order_dir**: <details><summary>Valores Permitidos:`desc` `asc` </summary>
-                    - ordena los resultados por una columna de forma ascendente o descendente.
-                    </details> 
+   - **order_dir**: - ordena los resultados por una columna de forma ascendente o descendente.<details><summary>Valores Permitidos:</summary>
+        - `desc` 
+        - `asc`
+        - **Ejemplo**:
+        ```
+        http://localhost/web2/TPE-Web2-CarBuy-Api/api/autosOp?order_by=id_marca_fk=1&order_dir=id_auto desc&limit=3&page=2
+        ```
+        </details> 
    - **limit**: Numero de elementos a mostrar.
    - **page**: Pagina a mostrar.
 - **Ejemplo Completo**:
