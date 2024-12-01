@@ -62,17 +62,17 @@ Para la parte opcional del trabajo, en la cual se debia poder ordenar, filtrar o
    - **order_dir**: ordena los resultados por una columna de forma ascendente o descendente.
         <details>
         <summary>Valores Permitidos</summary>
-        1. `ASC`
-        2. `DESC` 
+            - `ASC`
+            - `DESC` 
         </details>
    - **order_by**: filtra por campo.
         <details>
         <summary>Valores Permitidos</summary>
-        1. `id_auto`
-        2. `nombre_auto`
-        3. `descripcion`
-        4. `precio`
-        5. `id_marca_fk` 
+            - `id_auto`
+            - `nombre_auto`
+            - `descripcion`
+            - `precio`
+            - `id_marca_fk` 
         </details>
    - **limit**: Numero de elementos a mostrar.
    - **page**: Pagina a mostrar.
