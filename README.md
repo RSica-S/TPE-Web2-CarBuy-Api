@@ -59,27 +59,38 @@ Para la parte opcional del trabajo, en la cual se debia poder ordenar, filtrar o
 - **Endpoint:** `/autosOp`
 - **Método**: `GET`
 - Parametros adicionales:
-   - **order_by**: filtra por campo.<details><summary>Valores Permitidos:</summary>
+   - **order_by**: filtra por campo.<details><summary>*Valores Permitidos:*</summary>
         - `id_auto`
         - `nombre_auto`
         - `descripcion`
         - `precio`
         - `id_marca_fk`
         - **Ejemplo**:
+
         ```
         http://localhost/web2/TPE-Web2-CarBuy-Api/api/autosOp?order_by=id_marca_fk=1&order_dir=id_auto desc&limit=3&page=2
         ```         
         </details> 
-   - **order_dir**: - ordena los resultados por una columna de forma ascendente o descendente.<details><summary>Valores Permitidos:</summary>
+   - **order_dir**: - ordena los resultados por una columna de forma ascendente o descendente.<details><summary>*Valores Permitidos:*</summary>
         - `desc` 
         - `asc`
         - **Ejemplo**:
+        
         ```
         http://localhost/web2/TPE-Web2-CarBuy-Api/api/autosOp?order_by=id_marca_fk=1&order_dir=id_auto desc&limit=3&page=2
         ```
         </details> 
-   - **limit**: Numero de elementos a mostrar.
-   - **page**: Pagina a mostrar.
+   - **limit**: Numero de elementos a mostrar. <details><summary>*Ejemplo*</summary>
+        ```
+        http://localhost/web2/TPE-Web2-CarBuy-Api/api/autosOp?order_by=id_marca_fk=1&order_dir=id_auto desc&limit=3&page=2
+        ```
+        </details>
+
+   - **page**: Pagina a mostrar. <details><summary>*Ejemplo*</summary>
+        ```
+        http://localhost/web2/TPE-Web2-CarBuy-Api/api/autosOp?order_by=id_marca_fk=1&order_dir=id_auto desc&limit=3&page=2
+        ```
+        </details>
 - **Ejemplo Completo**:
 
     ```
@@ -164,14 +175,40 @@ Para la parte opcional del trabajo, en la cual se debia poder ordenar, filtrar o
 - **Endpoint:** `/marcasOp`
 - **Método**: `GET`
 - Parametros adicionales:
-   - **order_dir**: ordena los resultados por una columna de forma ascendente o descendente.
-   - **order_by**: filtra por campo.
-   - **limit**: Numero de elementos a mostrar.
-   - **page**: Pagina a mostrar.
+   - **order_by**: filtra por campo.<details><summary>*Valores Permitidos:*</summary>
+        - `id_marca`
+        - `nombre_marca` 
+        - `img_marca` 
+        - **Ejemplo**:
+
+        ```
+        http://localhost/web2/TPE-Web2-CarBuy-Api/api/autosOp?order_by=id_marca_fk=1&order_dir=id_auto desc&limit=3&page=2
+        ```         
+        </details> 
+   - **order_dir**: - ordena los resultados por una columna de forma ascendente o descendente.<details><summary>*Valores Permitidos:*</summary>
+        - `desc` 
+        - `asc`
+        - **Ejemplo**:
+        
+        ```
+        http://localhost/web2/TPE-Web2-CarBuy-Api/api/autosOp?order_by=id_marca_fk=1&order_dir=id_auto desc&limit=3&page=2
+        ```
+        </details> 
+   - **limit**: Numero de elementos a mostrar. <details><summary>*Ejemplo*</summary>
+        ```
+        http://localhost/web2/TPE-Web2-CarBuy-Api/api/autosOp?order_by=id_marca_fk=1&order_dir=id_auto desc&limit=3&page=2
+        ```
+        </details>
+
+   - **page**: Pagina a mostrar. <details><summary>*Ejemplo*</summary>
+        ```
+        http://localhost/web2/TPE-Web2-CarBuy-Api/api/autosOp?order_by=id_marca_fk=1&order_dir=id_auto desc&limit=3&page=2
+        ```
+        </details>
 - **Ejemplo Completo**:
 
     ```
-    http://localhost/web2/TPE-Web2-CarBuy-Api/api/marcasOp?order_by=id_marca_fk=1&order_dir=id_auto desc&limit=3&page=2
+    http://localhost/web2/TPE-Web2-CarBuy-Api/api/autosOp?order_by=id_marca_fk=1&order_dir=id_auto desc&limit=3&page=2
     ```
 
 #### **Crear una nueva marca**
